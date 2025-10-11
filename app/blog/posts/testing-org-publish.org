@@ -1,0 +1,218 @@
+#+title: Testing Org Publish
+
+* PROJ Low Vision Netrunner Prints :zinnia:netrunner:
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-09-21 Sun 21:31
+:ARCHIVE_FILE: ~/Documents/org/notes.org
+:ARCHIVE_OLPATH: Projects
+:ARCHIVE_CATEGORY: Project
+:ARCHIVE_TODO: PROJ
+:END:
+** KILL Calculate Appropriate Scaling
+CLOSED: [2025-05-06 Tue 15:12]
+
+I calculated the width of the cards vs. the margins on an original A4 or letter source document. So that would be 215.9mm - 3*63.5mm = 25.4mm in margins.
+
+25.4 * 1.42 = 36.068. So if I subtract 306.6 - 36.06 = 270.5
+
+Therefore the cards should fit in the the 11x17 *page*. But there will also be an image cutoff / margins introduced by the printer. How much should I expect for that? Is 0.25 inches per side reasonable to assume? So that would be 0.5 inches on the width, which would be...
+
+The true image width of the 11x17 page would be 279.4 - 12.7 = 266.7 mm
+
+Which is slightly over 270.5mm, which is the total width of the cards if scaled at 142.
+
+** KILL Proposition
+CLOSED: [2025-05-06 Tue 15:12]
+
+Here's how to convert those tuples into a dictionary of named dimensions with width/height attributes:
+
+#+begin_src python
+from collections import namedtuple
+
+print_wh = (279.4, 431.8)
+a4_wh = (210, 297)
+letter_wh = (215.9, 279.4)
+card_wh = (63.5, 88.9)
+ideal_wh = (88.9, 127)
+
+Dimension = namedtuple('Dimension', ['width', 'height'])
+dims = {
+    'print': Dimension(*print_wh),
+    'a4': Dimension(*a4_wh),
+    'letter': Dimension(*letter_wh),
+    'card': Dimension(*card_wh),
+    'ideal': Dimension(*ideal_wh)
+}
+
+a4_margins = (dims['a4'].width - 3*dims['card'].width, dims['a4'].height - 3*dims['card'].height)
+# | 19.5 | 30.299999999999955 |
+letter_margins = (dims['letter'].width - 3*dims['card'].width, dims['letter'].height - 3*dims['card'].height)
+# | 25.400000000000006 | 12.699999999999932 |
+
+ideal_scaling = (ideal_wh[0] / card_wh[0], ideal_wh[1] / card_wh[1])
+# | 1.4000000000000001 | 1.4285714285714284 |
+
+simple_scaling = 1.4
+#+end_src
+
+#+RESULTS:
+| 25.400000000000006 | 12.699999999999932 |
+
+#+begin_src calc
+25.4 * 1.4
+#+end_src
+
+#+RESULTS:
+: 35.56
+** DONE Test Prints at Library to calculate appropriate empirical sizing
+CLOSED: [2025-05-06 Tue 15:20]
+*** Upload to USB
+*** Original Cards
+Upon examining my prints, they aren't quite exactly MTG card size.
+**** Expected
+63.5 and 88.9
+
+**** Empirical
+62.9 x 87.13
+or just 63 x 87mm
+
+*** Big Cards scaled 1.4
+
+**** Expected
+89mm x 127mm
+
+**** Empirical via Cards
+87.5mm x 122mm
+
+It's like just about exactly 88 tbh.
+
+**** Empirical via Margin Elimination
+R + L Margins: 5mm + 9 mm
+T + B Margins: 33.5 + 31.5 mm = 65mm
+
+88.4 x 122.27
+
+#+begin_src calc
+279.4 - 14
+265.4 / 3
+#+end_src
+
+#+RESULTS:
+: 88.4666666667
+
+
+#+begin_src calc
+431.8 - 65
+366.8 / 3
+#+end_src
+
+#+RESULTS:
+: 122.266666667
+
+*** Printing Margins for Tabloid
+Right side: No Margins. Bu
+Left: 9mm
+
+** Proper Resizing 💖
+Scale the original System Gateway document's width by *1.41*
+Don't really care about the height but match it to the Tabloid Size
+
+Thus, PDF Mix Tools -> Pages Layout
+Width: 30.5 x 43.2 cm
+This will result in a 1.412 scaling and resulting cards will have the dimension
+
+89  * 123 mm
+Short of the sleeves by 4mm which is TOTALLY FINE.
+
+** DONE Check in person
+** DONE Print them!
+** DONE Writeup
+
+#+begin_export markdown
+My girlfriend is legally blind as well. I was thinking about this problem as well.
+Here's what I did, in an [imgur album](https://imgur.com/a/y7oWhfE).
+
+## Digital Play
+
+Play on [jinteki.net](https://jinteki.net) on Firefox using the [Cyberfeeder](https://addons.mozilla.org/en-CA/firefox/addon/cyberfeeder/) plugin. Import [these settings](https://gist.github.com/weavermarquez/d5126684cb567370950889cc14b6d5d1) by downloading the file. At the bottom of the "Settings" tab in the Cyberfeeder sidebar, you can select and import said file.
+
+Previews:
+
+- https://imgur.com/pyMb6o6
+- https://imgur.com/7gt4a9X
+
+You will also need to set these three settings on jinteki.net as well:
+
+##### Card preview zoom
+- [x] Card Image
+- [ ] Card Text
+
+##### [x] Keep zoomed cards on screen
+##### Card images
+- [x] Enable high-resolution card images
+
+## Physical Play
+
+For many cards, there is too much text to simply resize the text larger and have it all fit. And you don't want to go without the art – it's actually quite an important visual marker to help you recognize your hand and board at a glance.
+
+Here are some avenues I considered.
+
+### Throw money at the problem
+If you don't care about cost, [makeplayingcards.com](https://www.makeplayingcards.com/) has a variety of different card sizes for you to print, and the rest is done by providing files. However, to print the [oversized commander cards I mention below](https://www.makeplayingcards.com/design/custom-3-5-x-5-game-cards.html), this would cost about $1/card alone, making it over $400 + tariffs for System Gateway and Elevation.
+
+You can learn more about this approach here: https://old.reddit.com/r/magicproxies/
+
+### Print and Play Oversized MTG Commander (I did this one 🤩)
+
+Here's an [imgur album](https://imgur.com/a/y7oWhfE) that shows my results. The text is legible, comparable to a regular print book. You can find "deck boxes" for regular index cards at any dollar store in the same material as regular deck boxes. It will be difficult to handle if you have particularly small hands. Our average size hands can handle several shuffling methods decently well.
+
+The total cost for me was $95 CAD for System Gateway and Elevation; $71 in cards; $25 in equipment, and a bunch of time.
+
+Unless you have high quality proxies, which you can find info about at https://old.reddit.com/r/printandplay/, the minimum you need for physical play is:
+
+- Printed paper in card size 📰
+- Card backing🎴
+- A sleeve 🛡️
+
+#### Prints 📰
+The simplest solution for me was to print to use the Print and Play files already provided and print to a *oversized MTG commander* size, or the equivalent of two regular cards in area, side by side. These have sleeves available at a reasonable price. To print, you only need a simple 141% scaling, allowing you to print a NSG's Letter size (8.5 * 11) files to a Tabloid size (11 * 17).
+
+My public library has inexpensive laser printing at $0.20 CAD / color page, regardless of size, and the first $5 / month is free! So both System Gateway and Elevation together are just above $10 worth of print costs. My GF and I combined our free prints together to make this free.
+
+#### Cutting ✂️
+However, you will need to cut out all these cards. If you are low vision, you may need to get some help with the cutting. There are a number of options:
+- Straight edge & Rotary Cutter / Box Cutter (I did this but would not recommend doing so as a low vision person)
+- Fiskars Surecut ($25 CAD) / Rotary Bypass ($100-200 CAD), as described in [this video](  https://www.youtube.com/watch?v=_LCLpYaVBcY).
+❗ Note: I think the Surecut is what will do you best.
+
+#### Corner Rounder 🟢
+Lastly, I also purchased a Kadomaru Pro NEO ($25 CAD) to round the corners of the cards. This takes a fair bit of time, but it's really nice to have a corner rounder. Makes all sorts of paper look and feel ✨ premium✨. And protects your laser prints from getting damaged – the sharp corners are the first things to get damaged.
+
+https://www.amazon.ca/Corner-Cutter-Kadomaru-S4765079-mascot/dp/B08255V6L1
+
+
+#### Card Backing 🎴
+Just bought two sets of these for 200 for $21 CAD. I also rounded the corner for these too.
+https://www.amazon.ca/dp/B0CT4QGY5W?ref=ppx_yo2ov_dt_b_fed_asin_title
+
+#### Sleeves 🛡️
+I bought 5 sets of 40 for 200 sleeves in total for $30 CAD + shipping.
+
+For these sleeves, see [https://www.themakersphere.com/planechase-sleeves-mtg-oversized-sleeves/](This blog post about the best oversized sleeves.)
+
+I would recommend finding these on eBay in particular. I saw . Search `Oversize Commander` or `3.5x5"` or `89x127mm`
+Here are some entries from my history:
+
+- https://www.ebay.ca/itm/405232535531
+- https://www.ebay.ca/itm/395205801045
+- https://www.ebay.ca/itm/405232535499
+- https://www.ebay.ca/itm/167409868056 (this one is opaque-backed!)
+
+
+### Print and Play any other size
+
+If you want to re-frame the cards in Photoshop or by some program, reach out to NSG by email or talk about it on `#tools-development` on the [Green Level Clearance](https://discord.gg/VxgbNj5) discord. Since I went with the Oversized, I didn't look into this much further.
+
+The best size I found that's smaller than the Oversized is Tarot card size. You want a size that is well supported by sleeves.
+
+#+end_export
