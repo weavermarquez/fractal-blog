@@ -1,28 +1,73 @@
 ---
 title: 'Imagine Sisyphus Tappy'
-publishedAt: '2025-10-11'
+publishedAt: '2025-10-15'
 summary: 'Postmortem of the B2B SaaS Game Jam'
 ---
 
 * The B2B SaaS Game Jam
 
-I am visiting the tech heart of NYC in the month of vibetober. The foliage is starting to fade - the atmosphere begins to get spooky and sit on the eve of local upstart "Zohran Mamdani" and his revolution. Meanwhile, I joined a handful of people who come together to stage a week-long intensive "B2B SaaS Jam".
+Personally, I just love B2B SaaS. But at the B2B SaaS Game Jam, there is no B2B SaaS -- only /the grind/. 
 
-A B2B SaaS Jam is like a regular game jam, except some people choose to make video games. Curiously, nobody here made B2B SaaS, though we had two B2C softwares.
+Funnily enough, my only experience with game dev was rooted in business. Five years ago, I used to run a business teaching kids how to make video games for a few years out of my city's science center. Over those years, I taught grade schoolers how to make the same 7 video games, rip assets off of itch.io, and make the jankiest looking games ever. I sometimes used to think that I was sorry to the kids for disappointing their expectations of making the next /Roblox/ or /unicorn witch shooter/.
 
-I joined a group intent on making a rhythm game featuring Sisyphus of lore.
+Five years later, I'm beaming with pride at my very own janky ass game, making my very first original game using those skills. The end result was we had /fun/ as a team. I had bounced off of game jams in the past; and this one was the first one I truly stuck to and succeeded in making a game in! What a week.
 
-* I am Sisyphus and I am at the club with my boulder
+This is the story of /Imagine Sisyphus Tappy/, a rhythm game featuring Sisyphus at da club.
 
-
-
-
-* Necrodancer, but existentialist
+** Necrodancer but existentialist
 [Banner: the Mockup / Screenshot of the Game]
 Sprites generated with ludo.ai
 Concept art created through Krita
 
-** How did I feel throughout the process?
+Despite feeling like I had little experience in game development, making the same set of games over and over was great for internalizing the game loop concept. Everything is a loop. Menus are a loop. The game is a loop. Animations are a loop. The rendering system is a loop. Sisyphus is a loop.
+
+Easier said than done. We lost a day trying just trying to figure out our tech stack -- jumping from Phaser, Godot, React, to simple Javascript with Pixi.
+
+The early part of the development reminded me of something a friend of mine, Leon Conrad, wrote of the /Chinese Circular Structure/: Merge – Divide – Separate – Complete – Take form. The dynamic movement of creation that exists before and through intelligible things. In order to delegate tasks, an initial structure resembling a game loop had to be formed which we could divide and create distinguishable parts.
+
+#+begin_quote
+Two spirits *merged* into life
+To regulate heaven and organize earth
+Vast!
+No-one knows how far they reach
+Boundless!
+No-one knows where they will stop and rest
+From this they *divide* into yin yang
+*Separate* into eight poles
+Hard and soft *complete* each other
+And the ten thousand beings then *take form* (Lines 7–16)
+#+end_quote
+/from the Jing Shen, chapter 7 of the Huainanzi./
+
+I was thinking about this pattern as our team continued to develop our game further. We attempted to work in our own components, and repeatedly, we came back together to communicate and establish a shared vision of the game.
+
+One challenge we had starting out was the premature notion of separate responsibilities. Specific roles for specific game components, or for holding the role of reviewing pull requests. We trudged on with unspkoen tacit assumptions about what sort of game we were making.
+
+The moment we found our rhythm was after Noa got fed up with this division of labour and with the difficulty of mirroring information from the game state to the renderer. She generated a nice animated sprite of Sisyphus and pushed for her vision for a nice looking game --- as opposed to retro. This ran up against the tacit assumption the rest of the team, held that "retro games with small grid spaces are much simpler for game logic than granular pixel-grid systems."  While this may be true for tic tac toe, for this rhythm game, it was actually much simpler to just allow the gameplay to emerge out of whatever values we chose. She helped me realize that it really didn't matter whether our player moved up 1 grid unit per beat, or 100 pixels per second - everything was relative, anyway.
+
+Only once we had an actual player moving and rendering did we have the opportunity for truly clear communication on our shared vision --- but establishing that communication was a challenge. We still struggled for a while to get the rest of the game on the screen, but going through each code review, I saw the team grasp the whole of the game better and better. 
+
+During this first half of the week, I learned what it meant for somebody to be "the heart of a team". One teammate, Russel, was very honest about his frustrations with the rapidly changing "shared vision" of the game and stack and architecture those three days. But he is also a very passionate and cheerful guy, and celebrated our wins easily. His honest and kind frustration and his celebrations served as an indicator of the strength of our team's communication. It kept me motivated to do my best.
+
+** Everything Clicks
+Anansi embraced the grug-brained developer manifesto and kept an eye on scope creep.
+
+
+
+
+With Noa chugging at the trickiest problems of our code,
+
+
+After a couple of long nights working on ticket plans and refactoring directions, magic happened. Everything clicked!
+
+
+** Demo Day
+
+We brought her long held music video - a tribute to Garbage - to life. This fucking song.
+
+
+
+
 
 One of the challenges I have is knowing that I have much to improve on, while also having come so far already. And I know that many others are in the same boat.
 
@@ -37,6 +82,9 @@ For a long time, I've learned a lot about many different programming paradigms u
 
 
 It's a great feeling to be able to actually show people what we've worked on. 
+
+* I am Sisyphus and I am at the club with my boulder
+They don't know about my boulder.
 
 * Quality in a team 
 
@@ -59,27 +107,7 @@ There is no reason to be scared. But it's okay if you are.
 
 
 * Demo Day
-
 We flew close to the sun on this demo.
 
 * Success!
-
-* Irrelevant Things
-
-** Iconic Arithmetic Count
-andrew
-priya
-mark
-david
-russell
-anansi
-richard
-shaggy
-kai
-
-** Uhh
-I also got invited to a furry party.
-And meeting twitter people has been delightful.
-
-My experience 
 
