@@ -1,0 +1,85 @@
+#+title: The Solution to Mathphobia is Self-Evident: or, why 1 of 3 adults don't understand fractions
+#+date: <2025-11-15 Sat>
+#+author: Valerie Kim
+
+Here's a lil' math problem:
+: Valerie has 5 careers and 2 lynxes. One lynx loves to obsess over "fun puzzles"; the other loves to tend to people. How should Valerie split her life in the most fair way? 
+
+Feel free to critique my answer, or share your own.
+
+** Fractions traumatize way too many people
+
+Forgive me, for saying that math is one of the most natural things in the world --- as natural as storytelling and imagination and walking talking primates. But in an 8th grade classroom, 75% of the students won't agree [fn:1]. And that was before covid.
+
+These eighth graders then grow up to become adults. And 1 of 3 american adults don't understand fractions. They never got around to it. Why? The simple answer is that our way of representing fractions is broken. The most successful remedies include [fn:2]:
+- manipulatives
+- 
+
+** The Power of Icons
+
+Icons aren't just "easy to understand" --- they carry a degree of /self evidence/ to them.
+
+Icons are a necessary aspect of /public accessibility/. They 
+Icons are a special type of symbol that /depict the concept they represent/. Here are some icons:
+
+Compare some Icons vs. Symbols
+
+| icon | what it depicts |
+| 🙂   | smile           |
+| 런   | /tongue shape/    |
+| 山   | /mountain/        |
+| 🏠   | house           |
+| ☀️   | sun             |
+| 🌧️   | rain            |
+
+
+- road signs, e.g. winding road. falling rocks pictogram.
+- circuit diagrams :: 
+- pie chart :: 
+- syntax trees ::
+  
+
+Compare this to:
+
+
+
+About three years ago, I encountered and found myself absorbed in /Iconic Arithmetic/ by William Bricken. Bricken is an early researcher in Virtual Reality, and currently a professor of mathematics at UCLA.
+
+One of the ideas I've been sitting on, that I realized I can just get done, is picking up the torch of Iconic Arithmetic. Almost three years ago, I came across Laws of Form, as well as Iconic Arithmetic.
+
+
+[1] [[https://www.scientificamerican.com/article/fractions-where-it-all-goes-wrong/][Fractions: Where It All Goes Wrong]]
+[2] [[https://theconversation.com/high-number-of-adults-unable-to-do-basic-mathematical-tasks-92858][High number of adults unable to do basic mathematical tasks]]
+
+** Fun Puzzles at Fractal 
+It's eight weeks into an intensive program at Fractal Bootcamp. 
+
+I've been working really freaking hard, with long, long hours.
+I'm really grateful for this program for giving me a space where I can work long and sharing my ideas and working hard alongside other people. I am more committed to the path of making my own startup when the time comes.
+
+
+Many people actively complain about games like Hero Wars or Top War Battle Game for *false advertising*. The ads promised basic arithmetic puzzles, and people genuinely *wanted* to play them. The demand for intuitive math is real, but nobody is delivering it well.
+
+All signs point to iconic arithmetic.
+People crave iconic arithmetic -- even though they have not seen it yet. 
+
+** 
+
+
+[[https://youtu.be/1bvwOrGn1Zs][Our inability to understand the exponential function is our biggest weakness - Prof Albert Bartlett]]
+
+[[https://youtu.be/UqMl_Wb04nU][Sign and Space by Louis Kauffman]]
+
+[[https://youtu.be/25lJNRibYv8?si=hktW01VMSdMbrqwx][Simple Ideas with huge Impact from Clojure and Rama by Nathan Marz]]
+
+[[https://youtu.be/Cum5uN2634o?si=TOT4WhcT5poJj6Qx][The Complexity of Simplicity by Bryan Cantrill]]
+
+[[https://youtu.be/ZQ5_u8Lgvyk?si=dBUZedHCiifh1dRP][Designing and Evaluating Reusable Components by Casey Muratori]]
+
+I was watching this talk from the founder of Oxide Computer today, where he showed this graph of categories of technologies, from complex to simple:
+
+** Footnotes
+
+[fn:1] [[https://www.scientificamerican.com/article/fractions-where-it-all-goes-wrong/][Fractions: Where It All Goes Wrong]]
+[fn:2] [[https://files.eric.ed.gov/fulltext/ED552737.pdf][Improving At-Risk Leanears' Understanding of Fractions]]
+
