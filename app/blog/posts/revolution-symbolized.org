@@ -118,7 +118,7 @@ I think we need a lot more of this:
 
 Here’s a tiny example from a prototype I’ve been working on, a little toy world called *House of Bao*:
 
-[[/app/blog/posts/assets/opt/house-of-bao-1.webp][Screenshot of House of Bao: a small grid world where quantities are visible objects, not just numbers.]]
+[[img:assets/opt/house-of-bao-1.webp][Screenshot of House of Bao: a small grid world where quantities are visible objects, not just numbers.]]
 
 It’s not a full game yet, just a basic demonstration of some “axioms” of iconic arithmetic: things exist as piles and tokens on a grid; operations move and combine them in ways you can see. The whole point is that you shouldn’t need to read a HUD or a spreadsheet to tell what’s happening — your eyes should be enough.
 
