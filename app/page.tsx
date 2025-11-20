@@ -54,7 +54,16 @@ export default function Page() {
             >
               GitHub
             </a>{' '}
-            for code and experiments.
+            for code and experiments, plus{' '}
+            <a
+              href="https://x.com/ForecastFire"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+            >
+              Twitter
+            </a>{' '}
+            for thoughts, work-in-progress, and links.
           </li>
         </ul>
       </div>

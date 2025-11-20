@@ -16,6 +16,9 @@ const navItems = {
   'https://github.com/weavermarquez': {
     name: 'github',
   },
+  'https://x.com/ForecastFire': {
+    name: 'twitter',
+  },
 }
 
 export function Navbar() {
