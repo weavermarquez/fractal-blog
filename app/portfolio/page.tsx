@@ -38,7 +38,7 @@ export default function Page() {
         </li>
         <li>
           <a
-            href="/blog/revolution-symbolized"
+            href="/blog/revolution-will-not-be-symbolized"
             className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
           >
             The Revolution Will Not Be Symbolized
