@@ -40,9 +40,19 @@ export default function Page() {
           into visible, self-evident structures.
         </li>
       </ul>
+      <div className="mb-6">
+        <a
+          href="https://drive.google.com/file/d/1a9kViOt2HabN7lCwAyTR3SY0gpPMrlNk/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center rounded-md border border-neutral-300 px-3 py-1.5 text-sm font-medium text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+        >
+          View full resume (PDF)
+        </a>
+      </div>
       <p className="text-neutral-700 dark:text-neutral-300">
-        I&apos;m still polishing a full public-facing CV. In the meantime, you
-        can get a good sense of my work from my{' '}
+        I&apos;m still polishing a more detailed public-facing CV. In the
+        meantime, you can get a good sense of my work from my{' '}
         <a
           href="/blog"
           className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"

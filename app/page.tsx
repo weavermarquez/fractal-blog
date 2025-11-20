@@ -40,9 +40,18 @@ export default function Page() {
               href="/resume"
               className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
             >
-              resume stub
+              resume
             </a>{' '}
-            while I finish a public-facing CV,
+            (plus a{' '}
+            <a
+              href="https://drive.google.com/file/d/1a9kViOt2HabN7lCwAyTR3SY0gpPMrlNk/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+            >
+              downloadable PDF
+            </a>
+            ),
           </li>
           <li>
             and my{' '}
