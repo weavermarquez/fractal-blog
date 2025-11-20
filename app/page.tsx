@@ -4,15 +4,69 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        Valerie Kim
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        I build tools and games that make complicated things feel
+        self-evident &mdash; especially around math, accessibility, and how
+        people actually think.
       </p>
+      <p className="mb-4 text-neutral-700 dark:text-neutral-300">
+        I&apos;ve worked across public service, non-profits, and education:
+        shipping case-management features at Environment and Climate Change
+        Canada, standing up infrastructure for a food-security charity, and
+        running a kids&apos; game-dev academy. Lately I&apos;ve been deep in
+        &quot;iconic arithmetic&quot; &mdash; finding ways to make quantities
+        and code behave more like good diagrams than opaque symbols.
+      </p>
+      <div className="mb-6 space-y-1 text-neutral-700 dark:text-neutral-300">
+        <p>
+          You can find:
+        </p>
+        <ul className="list-disc ml-5 space-y-1">
+          <li>
+            my{' '}
+            <a
+              href="/portfolio"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+            >
+              portfolio
+            </a>{' '}
+            of projects and write-ups,
+          </li>
+          <li>
+            a{' '}
+            <a
+              href="/resume"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+            >
+              resume stub
+            </a>{' '}
+            while I finish a public-facing CV,
+          </li>
+          <li>
+            and my{' '}
+            <a
+              href="https://github.com/weavermarquez"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+            >
+              GitHub
+            </a>{' '}
+            for code and experiments, plus{' '}
+            <a
+              href="https://x.com/ForecastFire"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+            >
+              Twitter
+            </a>{' '}
+            for thoughts, work-in-progress, and links.
+          </li>
+        </ul>
+      </div>
       <div className="my-8">
         <BlogPosts />
       </div>
