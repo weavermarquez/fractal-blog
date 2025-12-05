@@ -1,14 +1,12 @@
 export const metadata = {
-  title: 'Resume',
-  description: 'Resume for Valerie Kim',
-}
+  title: "Resume",
+  description: "Resume for Valerie Kim",
+};
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-4 text-2xl font-semibold tracking-tighter">
-        Resume
-      </h1>
+      <h1 className="mb-4 text-2xl font-semibold tracking-tighter">Resume</h1>
       <p className="text-neutral-700 dark:text-neutral-300">
         I&apos;m a software developer and educator with a background in Computer
         Science and Communications. I like building tools and games that make
@@ -18,7 +16,7 @@ export default function Page() {
       <h2 className="mt-6 mb-2 text-lg font-semibold tracking-tight">
         Highlights
       </h2>
-      <ul className="mb-4 list-disc ml-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+      <ul className="mb-4 ml-5 space-y-1 list-disc text-neutral-700 dark:text-neutral-300">
         <li>
           Technology lead at Huggabowl, a food-security non-profit, where I
           deployed an ERP-style system to coordinate volunteers, payments, and
@@ -42,34 +40,34 @@ export default function Page() {
       </ul>
       <div className="mb-6">
         <a
-          href="https://drive.google.com/file/d/1a9kViOt2HabN7lCwAyTR3SY0gpPMrlNk/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1uRwsfJ2EiJD9wFanzZCT47HA7NJ9-hoX/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-md border border-neutral-300 px-3 py-1.5 text-sm font-medium text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          className="inline-flex items-center py-1.5 px-3 text-sm font-medium rounded-md border border-neutral-300 text-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-800 hover:bg-neutral-100"
         >
           View full resume (PDF)
         </a>
       </div>
       <p className="text-neutral-700 dark:text-neutral-300">
         I&apos;m still polishing a more detailed public-facing CV. In the
-        meantime, you can get a good sense of my work from my{' '}
+        meantime, you can get a good sense of my work from my{" "}
         <a
           href="/blog"
-          className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+          className="underline underline-offset-4 decoration-neutral-400 dark:hover:decoration-neutral-200 hover:decoration-neutral-800"
         >
           blog
-        </a>{' '}
-        and{' '}
+        </a>{" "}
+        and{" "}
         <a
           href="https://github.com/weavermarquez"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 dark:hover:decoration-neutral-200"
+          className="underline underline-offset-4 decoration-neutral-400 dark:hover:decoration-neutral-200 hover:decoration-neutral-800"
         >
           GitHub profile
         </a>
         .
       </p>
     </section>
-  )
+  );
 }
